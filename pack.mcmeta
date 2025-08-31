@@ -1,0 +1,7 @@
+{
+    "pack": {
+        "pack_format": 81,
+        "supported_formats": {"min_inclusive":48, "max_inclusive":81},
+        "description": "With this mod, when you right click glowstone it makes all nearby players glow, helping you easily locate friends along the way. It is as simple as getting glowstone from the nether."
+    }
+}

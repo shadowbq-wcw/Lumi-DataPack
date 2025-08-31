@@ -1,0 +1,18 @@
+{
+    "criteria": {
+      "using_item": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "item": {
+            "items": "minecraft:glowstone_dust",
+            "predicates": {
+              
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "example:glow"
+    }
+  }

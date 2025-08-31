@@ -1,0 +1,67 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:glowstone",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": "#minecraft:pickaxes",
+                    "components": {
+                      "minecraft:enchantments": {
+                        "minecraft:silk_touch": 1
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:glowstone_dust",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "type": "minecraft:uniform",
+                    "min": 2,
+                    "max": 4
+                  }
+                },
+                {
+                  "function": "minecraft:set_lore",
+                  "lore": [
+                    {
+                      "text": "right click to make all nearby players glow",
+                      "color": "gold",
+                      "font": "minecraft:default"
+                    }
+                  ],
+                  "mode": "replace_all"
+                },
+                {
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:consumable": {
+                      "consume_seconds": 10000,
+                      "animation": "brush",
+                      "has_consume_particles": false
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
